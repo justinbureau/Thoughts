@@ -1,0 +1,15 @@
+= notice
+%br
+= link_to "New Thought", new_thought_path
+
+- @thoughts.each do |thought|
+	%h3= thought.title
+	%p= thought.text.html_safe
+	%i= thought.source
+	%br
+	%br
+	= link_to "Edit", edit_thought_path(thought)
+	|
+	= link_to "Delete", thought, method: :delete, data: { confirm: 'Are you sure?'}
+	%br
+	%br
