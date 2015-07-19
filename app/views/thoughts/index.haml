@@ -3,13 +3,18 @@
 = link_to "New Thought", new_thought_path
 
 - @thoughts.each do |thought|
-	%h3= thought.title
+	%h3 
+		= link_to thought.title.html_safe, thought_path(thought)
 	%p= thought.text.html_safe
-	%i= thought.source
+	%i= thought.source.html_safe
 	%br
-	%br
+	%h5
+		%i
+			Created :
+			=thought.created_at.strftime("%d %b. %Y")
+			|
+			Updated :
+			=thought.updated_at.strftime("%d %b. %Y")
 	= link_to "Edit", edit_thought_path(thought)
 	|
 	= link_to "Delete", thought, method: :delete, data: { confirm: 'Are you sure?'}
-	%br
-	%br

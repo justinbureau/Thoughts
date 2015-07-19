@@ -1,0 +1,30 @@
+
+---
+thoughts:
+  columns:
+  - id
+  - title
+  - text
+  - source
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - 'French VCs : criterion of investiment'
+    - "A startup needs to be: \r\n<li><b>Disruptive</b></li>\r\n<li>With a big <b>potential</b>
+      of growth, big market ahead</li>\r\n<li>Managed by a bad-ass <b>team</b>, with
+      highly talented people</li>\r\n"
+    - 'Philippe Colombel, Partech Venture - <a href="http://tempsreel.nouvelobs.com/economie/20150519.OBS9205/la-france-paradis-des-start-ups.html"
+      target="_blank">Nouvel Obs</a> '
+    - '2015-07-18 04:39:00.622101'
+    - '2015-07-18 05:48:02.204021'
+  - - 9
+    - European is a hard market to go global
+    - "Since Europe is composed by multiple countries - which all follow different
+      juridictions, speak different languages and have all their own unique culture
+      - it's hard to go global, and therefore to scale big. \r\n</br>\r\nThat's why
+      European startups often go to the US. "
+    - <a href="http://venturebeat.com/2015/04/04/why-new-york-city-is-the-best-choice-for-european-startups/"
+      target="_blank">Venture Beat<a>
+    - '2015-07-18 06:12:33.024819'
+    - '2015-07-18 06:12:48.464371'
