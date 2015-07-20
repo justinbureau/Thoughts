@@ -1,20 +1,41 @@
 = notice
 %br
-= link_to "New Thought", new_thought_path
 
-- @thoughts.each do |thought|
-	%h3 
-		= link_to thought.title.html_safe, thought_path(thought)
-	%p= thought.text.html_safe
-	%i= thought.source.html_safe
+%h1= Thoughts
+%br
+
+
+= form_for @thought do |f|
+	= f.text_field :title, placeholder: "Title" 
 	%br
-	%h5
-		%i
-			Created :
-			=thought.created_at.strftime("%d %b. %Y")
-			|
-			Updated :
-			=thought.updated_at.strftime("%d %b. %Y")
-	= link_to "Edit", edit_thought_path(thought)
-	|
-	= link_to "Delete", thought, method: :delete, data: { confirm: 'Are you sure?'}
+	%br
+	= f.text_area :text, placeholder: "Your Thought", size: "25x7"
+	%br
+	%br
+	= f.text_field :source, placeholder: "Source"
+	%br
+	%br
+	= f.submit "Create"
+	%br
+	%br
+
+.content
+	- @thoughts.each do |thought|
+		.thought
+			.title
+				= thought.title.html_safe
+			%p= thought.text.html_safe
+			.source
+				= thought.source.html_safe
+			.info
+				%i
+					Created :
+					=thought.created_at.strftime("%d %b. %Y")
+					|
+					Updated :
+					=thought.updated_at.strftime("%d %b. %Y")
+			.action
+				= link_to "Edit", edit_thought_path(thought)
+				|
+				= link_to "Delete", thought, method: :delete, data: { confirm: 'Are you sure?'}
+		.space

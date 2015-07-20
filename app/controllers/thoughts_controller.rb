@@ -1,7 +1,8 @@
 class ThoughtsController < ApplicationController	
 
 	def index
-		@thoughts = Thought.all
+		@thought = Thought.new
+		@thoughts = Thought.order(created_at: :desc).all
 	end
 
 	def show 
